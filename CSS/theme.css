@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('BackGround1.png');  
+    background-size: 100% auto; 
+    background-position: top center;
+    background-repeat: no-repeat; 
+    min-height: 271vh; 
+    position: relative;
+  
+}
+
+.main-title{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 70px;
+    font-weight: 150;
+background: linear-gradient(
+      to bottom,
+      #fff6cc,
+      #f7d774,
+      #ffffff,
+      #fcfcfc,
+      #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+      0px 2px 4px #bf9b30,
+      0px 0px 10px rgb(240, 219, 29),
+      0px 0px 20px rgb(255, 255, 255),
+      0px 0px 40px rgb(255, 255, 255);   
+    margin-top: 380px;
+    font-family: 'cinzel' , serif;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    position: absolute;
+    transition: transform 0.3s ease;
+    z-index: 50;
+    
+}
+
+.card-1 {
+    transform: perspective(800px) rotateY(53deg) 
+    translateX(-50px);
+    right: 900px;
+    top: 520px;
+    width: 185px;
+    height: 250px;
+    
+}
+.card-1:hover {
+    transform: perspective(800px) rotateY(53deg) translateX(-50px) translateY(-10px);
+}
+
+
+
+
+.card-2 {
+    transform: perspective(800px) rotateY(-38deg)
+    translateX(50px);
+    width: 74px;
+    height: 200px;
+    right: 482px;
+    top: 540px;
+  
+}
+
+.card-2:hover {
+    transform: perspective(800px) rotateY(-38deg) translateX(50px) translateY(-10px);
+}
+
+
+
+
+.card-3 {
+    transform: perspective(800px) rotateY(45deg) 
+    translateX(-50px);
+    right: 750px;
+    top: 545px;
+    width: 90px;
+    height: 200px;
+}
+
+.card-3:hover {
+    transform: perspective(800px) rotateY(45deg) translateX(-50px) translateY(-10px);
+}
+
+
+
+
+
+.card-4 {
+    transform: perspective(800px) rotateY(-54deg)
+    translateX(50px);
+    right: 220px;
+    top: 520px;
+    width: 185px;
+    height: 250px;
+    
+}
+
+.card-4:hover {
+    transform: perspective(800px) rotateY(-54deg) translateX(50px) translateY(-10px);
+}
+
+
+
+.brief {
+    right: 350px;
+    top: 200px;
+    width: 600px;
+    height: 190px;
+    
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    
+}
+
+.popup-content {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+    text-align: center;
+    z-index: 10000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10000;
+    color: white;
+}
+
+
+.avatar {
+    width: 300px;
+    animation: float 4s ease-in-out infinite;
+    margin-top: 950px;
+   margin-right: 350px
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+.avatar-box {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+.bubble {
+    position: absolute;
+    bottom: 30%;
+    right: 600px;
+    background: rgba(238, 232, 232, 0.986);
+    color: rgb(135, 183, 238);
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+    transform: translateY(10px);
+    transition: 0.3s;
+    pointer-events: auto;
+    
+    
+}
+
+
+.bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(238, 232, 232, 0.986) transparent transparent transparent;
+
+}
+
+
+.bubble:hover {
+    transform: translate(-20px, -15px) scale(1.05);
+    box-shadow: 0 0 15px rgba(135, 183, 238, 0.7);
+
+}
+
+
+.back-btn {
+    position: absolute ;
+    top: -350px;
+    left: 30px;
+    padding: 10px 18px;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
