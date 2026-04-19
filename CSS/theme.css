@@ -13,10 +13,13 @@ body {
 }
 
 .main-title{
-    text-align: center;
-    padding-top: 100px;
+    padding-top: 75px;
     font-size: 70px;
     font-weight: 150;
+    margin-top: 100px ;
+    margin-right: 500px ;
+    letter-spacing: 5px;
+
 background: linear-gradient(
       to bottom,
       #fff6cc,
@@ -34,8 +37,32 @@ background: linear-gradient(
       0px 0px 10px rgb(240, 219, 29),
       0px 0px 20px rgb(255, 255, 255),
       0px 0px 40px rgb(255, 255, 255);   
-    margin-top: 300px;
-    font-family: 'cinzel' , serif;
+      margin-top: 300px;
+      font-family: 'cinzel' , serif;
+}
+
+.card-title,
+.brief-title {
+    font-size: 24px;
+    margin-top: -5px;
+    font-family: 'cinzel', serif;
+    background: linear-gradient(
+      to bottom,
+      #fff6cc,
+      #f7d774,
+      #ffffff,
+      #fcfcfc,
+      #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+      0px 2px 4px #bf9b30,
+      0px 0px 10px rgb(240, 219, 29),
+      0px 0px 20px rgb(255, 255, 255),
+      0px 0px 40px rgb(255, 255, 255);
 }
 
 .card {
@@ -43,8 +70,8 @@ background: linear-gradient(
     padding: 20px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     color: white;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
@@ -54,13 +81,24 @@ background: linear-gradient(
     
 }
 
+.card p,
+.brief p {
+    color: rgba(255, 255, 255, 0.85); 
+    font-size: 19px;
+    position: relative;
+     top: -8px;
+
+}
+
+
 .card-1 {
     transform: perspective(800px) rotateY(53deg) 
     translateX(-50px);
     right: 900px;
-    top: 900px;
+    top: 890px;
     width: 185px;
     height: 250px;
+    
     
 }
 .card-1:hover {
@@ -69,14 +107,13 @@ background: linear-gradient(
 
 
 
-
 .card-2 {
-    transform: perspective(800px) rotateY(-38deg)
+    transform: perspective(800px) rotateY(-39deg)
     translateX(50px);
-    width: 74px;
+    width: 100px;
     height: 200px;
-    right: 482px;
-    top: 925px;
+    right: 470px;
+    top: 915px;
   
 }
 
@@ -90,9 +127,9 @@ background: linear-gradient(
 .card-3 {
     transform: perspective(800px) rotateY(45deg) 
     translateX(-50px);
-    right: 750px;
-    top: 925px;
-    width: 90px;
+    right: 735px;
+    top: 915px;
+    width: 110px;
     height: 200px;
 }
 
@@ -108,7 +145,7 @@ background: linear-gradient(
     transform: perspective(800px) rotateY(-54deg)
     translateX(50px);
     right: 220px;
-    top: 900px;
+    top: 885px;
     width: 185px;
     height: 250px;
     
@@ -121,10 +158,18 @@ background: linear-gradient(
 
 
 .brief {
+    right: 310px;
+    top: 550px;
+    width: 700px;
+    height: 150px;
+    
+}
+
+.Ai-card{
     right: 350px;
-    top: 580px;
-    width: 600px;
-    height: 190px;
+    top: 1650px;
+    width: 700px;
+    height: 150px;
     
 }
 
@@ -166,7 +211,7 @@ background: linear-gradient(
     width: 300px;
     animation: float 4s ease-in-out infinite;
     margin-top: 895px;
-   margin-right: 350px
+   margin-right: 3px
 }
 
 @keyframes float {
@@ -182,22 +227,57 @@ background: linear-gradient(
 }
 
 
+.bubble-title {
+    font-size: 16px;
+    font-family: 'cinzel', serif;
+     position: relative;
+     left: -67px;
+     top: -8px;
 
+    background: linear-gradient(
+      to bottom,
+      #fff6cc,
+      #f7d774, 
+      #ffffff,
+      #fcfcfc,
+      #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     text-shadow:
+      0px 2px 4px #bf9b30,
+      0px 0px 10px rgb(240, 219, 29),
+      0px 0px 20px rgb(255, 255, 255),
+      0px 0px 40px rgb(255, 255, 255);
+      margin: 0 0 5px;
+}
+
+.bubble p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    margin: 0;
+    position: relative;
+    top: -3px;
+}
 
 .bubble {
     position: absolute;
     bottom: 31%;
-    right: 580px;
-    background: rgba(238, 232, 232, 0.986);
-    color: rgb(135, 183, 238);
+    right: 200px;
+    background: rgba(255, 255, 255, 0.15); 
+    color: #ffffff;
     padding: 10px 15px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 15px;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(205, 227, 230, 0.4); /* لمسة تركواز */
     white-space: nowrap;
     transform: translateY(10px);
     transition: 0.3s;
     pointer-events: auto;
-    
+
     
 }
 
@@ -209,10 +289,9 @@ background: linear-gradient(
     right: 20px;
     border-width: 8px;
     border-style: solid;
-    border-color: rgba(238, 232, 232, 0.986) transparent transparent transparent;
 
+    border-color: rgba(255, 255, 255, 0.15) transparent transparent transparent;
 }
-
 
 .bubble:hover {
     transform: translate(-20px, -15px) scale(1.05);
@@ -234,17 +313,34 @@ background: linear-gradient(
   gap: 8px;
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
   transition: all 0.3s ease;
-  margin-right: 1200px;
+  margin-right: 1220px;
   margin-top: 20px;
 }
 
 .back-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 180, 166, 0.8);
-  background: linear-gradient(135deg, #00B4A6, #D4AF37);
+  box-shadow: 0 0 25px rgba(220, 240, 238, 0.8);
+  background: linear-gradient(135deg, #ebf1b6, #D4AF37);
 }
 
 .back-btn::before {
-  content: "←";
   font-size: 22px;
 }
+
+.ai-reader {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 30px;
+    position: relative;
+    top: -200px;  
+    right: 330px;
+}
+
+.ai-reader:hover {
+    transform: scale(1.2);
+
+}
+

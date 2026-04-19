@@ -25,3 +25,16 @@ document.querySelectorAll(".close").forEach(btn => {
         btn.closest(".popup").style.display = "none";
     };
 });
+
+function toggleAudio(icon) {
+    const audio = document.getElementById("brief-audio");
+
+    if (audio.paused) {
+        audio.play();
+        icon.textContent = "⏹️"; 
+    } else {
+        audio.pause();
+        audio.currentTime = 0;
+        icon.textContent = "🕪";
+    }
+}
