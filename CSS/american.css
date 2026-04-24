@@ -1,0 +1,299 @@
+/* NATIVE AMERICANS — FULL VERTICAL JOURNEY
+   Aesthetic: Moving Background / Cinematic Scroll
+*/
+
+:root {
+    --gold: #D4AF37;
+    --gold-bright: #f7d774;
+    --deep-bg: #0a0805;
+    --text-color: rgba(255, 245, 220, 0.95);
+    --glass-bg: rgba(10, 8, 5, 0.85);
+    --border-gold: rgba(212, 175, 55, 0.3);
+    --font-display: 'Cinzel Decorative', serif;
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Crimson Text', serif;
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--deep-bg);
+    /* السر هنا: الخلفية بتتحرك مع السكرول وبتاخد طولها الطبيعي */
+    background-image: url('../Images/nativeAmericans.png');
+    background-size: 100% auto;
+    /* العرض كامل والطول يتمدد مع الصورة */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+
+    color: var(--text-color);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+/* تعتيم ثابت (Vignette) يفضل مكانه عشان الكلام يفضل واضح طول ما أنت نازل */
+.vignette-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== SECTIONS LAYOUT ===== */
+section {
+    position: relative;
+    z-index: 2;
+    /* فوق التعتيم */
+    min-height: 100vh;
+    /* كل جزء بياخد طول الشاشة */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* ------------------------------------------------------------
+   PART 1: HERO (Top - Warrior Face)
+   ------------------------------------------------------------ */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 45vh;
+    min-height: 120vh;
+    /* مساحة واسعة قبل بداية المحتوى التاني */
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeInDown 1.8s ease-out;
+}
+
+.main-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 7rem);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    background: linear-gradient(to bottom, #fff, var(--gold-bright), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.4));
+
+    /* إضافة مسافة أمان إضافية لو حابب تنزله أكتر */
+    margin-top: 20px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-title);
+    letter-spacing: 10px;
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    color: var(--gold-bright);
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
+   PART 2: COUNCIL (Middle - Fire & Pillars)
+   ------------------------------------------------------------ */
+.council-section {
+    margin-top: 20vh;
+    /* مسافة إضافية عشان نكشف الصورة أكتر */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+/* البوكس والكروت هينزلوا تلقائياً مع القسم بتاعهم */
+.council-section {
+    margin-top: 20vh;
+    /* مسافة إضافية عشان نكشف الصورة أكتر */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background: rgba(15, 12, 8, 0.9);
+    border: 1px solid var(--border-gold);
+    padding: 40px 25px;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-title {
+    font-family: var(--font-title);
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.brief-container {
+    /* اللون الأسود الشفاف الفخم اللي في الصورة */
+    background: rgba(0, 0, 0, 0.75);
+
+    /* حدود ذهبية خفيفة عشان يظهر */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+
+    /* مسافات داخلية عشان الكلام ميبقاش لازق في الحواف */
+    padding: 40px;
+
+    /* عرض البوكس */
+    width: 90%;
+    max-width: 1000px;
+
+    /* جعل الزوايا حادة قليلاً زي ستايل الكروت */
+    border-radius: 4px;
+
+    /* تأثير الضباب خلف البوكس لزيادة الوضوح */
+    backdrop-filter: blur(8px);
+
+    /* محاذاة النص */
+    text-align: left;
+    /* أو center حسب رغبتك */
+
+    margin: 0 auto 60px auto;
+    /* توسيط البوكس ومسافة تحت قبل الكروت */
+}
+
+/* تنسيق الجملة نفسها (العنوان الصغير) */
+.brief-title {
+    color: var(--gold);
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* تنسيق الفقرة داخل البوكس */
+.brief-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------
+   PART 3: GUIDE (Bottom - The Well/Floor)
+   ------------------------------------------------------------ */
+.guide-section {
+    justify-content: flex-end;
+    padding-bottom: 100px;
+}
+
+.guide-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    background: var(--glass-bg);
+    padding: 40px;
+    border-top: 4px solid var(--gold);
+    backdrop-filter: blur(10px);
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar {
+    width: 300px;
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.7));
+    animation: float 6s ease-in-out infinite;
+}
+
+.ai-info-card h3 {
+    font-family: var(--font-title);
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ===== ANIMATIONS & UTILS ===== */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+    background: var(--glass-bg);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 24px;
+    cursor: pointer;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+}
+
+.back-btn:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .guide-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+}

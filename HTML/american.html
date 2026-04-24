@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Native Americans</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/american.css">
+</head>
+
+<body>
+
+    <div class="vignette-overlay"></div>
+
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">Native Americans</h1>
+            <p class="hero-subtitle">Guardians of the Sacred Earth</p>
+        </div>
+    </section>
+
+    <section class="council-section">
+        <div class="brief-container">
+            <h2 class="brief-title">The Sacred Council</h2>
+            <div class="brief-deco-line"></div>
+            <p class="brief-text">
+                Native American heritage is a rich tapestry of thousands of years of culture and spiritual resilience.
+                From the sprawling plains to the high mountains, these civilizations thrived on harmony with the Earth,
+                leaving behind a legacy that still echoes through the canyons and the winds of time.
+            </p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <span class="card-icon">🦅</span>
+                <h3 class="card-title">Ancient Wisdom</h3>
+                <p>Whispers of ancestors carried by the mountain winds and the spirit of the eagle.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🔥</span>
+                <h3 class="card-title">Eternal Flame</h3>
+                <p>The tribal fire that never goes out, representing the heart of the community.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🌙</span>
+                <h3 class="card-title">Spirit Dreams</h3>
+                <p>Navigating the night through vision quests and the guidance of the stars.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🐺</span>
+                <h3 class="card-title">Totem Path</h3>
+                <p>Walking the earth with the strength of the bear and the loyalty of the wolf.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section">
+        <div class="guide-wrapper">
+            <div class="avatar-container">
+                <img src="../Images/nativeAmericansAvatar.png" class="avatar" alt="Tribal Guide">
+            </div>
+            <div class="ai-info-card">
+                <div class="ai-header">
+                    <span class="ai-icon">🌿</span>
+                    <h3>Your Tribal Guide</h3>
+                </div>
+                <p>Nerina is here to lead you through the deep wisdom of the Great Plains. Ask about the legends of the
+                    earth or the secrets of the sacred ceremonies.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // سكريبت بسيط عشان العناصر تظهر بسلاسة وأنت بتنزل
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .brief-container, .guide-wrapper').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
