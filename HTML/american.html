@@ -14,9 +14,9 @@
 <body>
 
     <div class="vignette-overlay"></div>
-
     <button class="back-btn" onclick="window.history.back()">Back</button>
 
+    <!-- ===================== SECTION 1: HERO ===================== -->
     <section class="hero-section">
         <div class="hero-content">
             <h1 class="main-title">Native Americans</h1>
@@ -24,7 +24,10 @@
         </div>
     </section>
 
+    <!-- ===================== SECTION 2: COUNCIL ===================== -->
     <section class="council-section">
+
+        <!-- البوكس التعريفي — تحت العنوان مباشرة -->
         <div class="brief-container">
             <h2 class="brief-title">The Sacred Council</h2>
             <div class="brief-deco-line"></div>
@@ -33,69 +36,78 @@
                 From the sprawling plains to the high mountains, these civilizations thrived on harmony with the Earth,
                 leaving behind a legacy that still echoes through the canyons and the winds of time.
             </p>
+            <audio id="brief-audio" src="../AI-Reader/NoteGPT_Speech_1777226255953.mp3"></audio> <span id="audio-btn"
+                style="cursor:pointer; font-size:1.8rem; color:#D4AF37; display:inline-block; margin-top:20px;">🔊</span>
         </div>
 
+        <!-- الكاردز — بتبقى عند العواميد في الباك جراوند -->
         <div class="cards-grid">
-            <div class="card">
+
+            <div class="card" data-modal="wisdom">
                 <span class="card-icon">🦅</span>
                 <h3 class="card-title">Ancient Wisdom</h3>
                 <p>Whispers of ancestors carried by the mountain winds and the spirit of the eagle.</p>
             </div>
 
-            <div class="card">
+            <div class="card" data-modal="flame">
                 <span class="card-icon">🔥</span>
                 <h3 class="card-title">Eternal Flame</h3>
                 <p>The tribal fire that never goes out, representing the heart of the community.</p>
             </div>
 
-            <div class="card">
+            <div class="card" data-modal="dreams">
                 <span class="card-icon">🌙</span>
                 <h3 class="card-title">Spirit Dreams</h3>
                 <p>Navigating the night through vision quests and the guidance of the stars.</p>
             </div>
 
-            <div class="card">
+            <div class="card" data-modal="totem">
                 <span class="card-icon">🐺</span>
                 <h3 class="card-title">Totem Path</h3>
                 <p>Walking the earth with the strength of the bear and the loyalty of the wolf.</p>
             </div>
+
         </div>
     </section>
 
+    <!-- ===================== SECTION 3: TWO EDGE PORTALS ===================== -->
     <section class="guide-section">
-        <div class="guide-wrapper">
-            <div class="avatar-container">
-                <img src="../Images/nativeAmericansAvatar.png" class="avatar" alt="Tribal Guide">
-            </div>
-            <div class="ai-info-card">
-                <div class="ai-header">
-                    <span class="ai-icon">🌿</span>
-                    <h3>Your Tribal Guide</h3>
-                </div>
-                <p>Nerina is here to lead you through the deep wisdom of the Great Plains. Ask about the legends of the
-                    earth or the secrets of the sacred ceremonies.</p>
-            </div>
+        <div class="portals-stage">
+
+            <!-- أقصى الشمال — أطلنطس -->
+            <a href="atlantis.html" class="portal-card">
+                <span class="portal-icon">🌊</span>
+                <p class="portal-label">Unlock the Myth</p>
+                <h3 class="portal-title">Age of Atlantis</h3>
+                <p class="portal-desc">Dive beneath the waves into the lost civilization of Atlantis — where science met
+                    sorcery and the ocean swallowed an empire.</p>
+                <span class="portal-arrow">→</span>
+            </a>
+
+            <!-- أقصى اليمين — فرعوني -->
+            <a href="egypt.html" class="portal-card">
+                <span class="portal-icon">𓂀</span>
+                <p class="portal-label">Enter the Kingdom</p>
+                <h3 class="portal-title">Age of the Pharaohs</h3>
+                <p class="portal-desc">Cross the sands of time into ancient Egypt — where gods walked among men and
+                    stone temples reached toward eternity.</p>
+                <span class="portal-arrow">→</span>
+            </a>
+
         </div>
     </section>
 
-    <script>
-        // سكريبت بسيط عشان العناصر تظهر بسلاسة وأنت بتنزل
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, { threshold: 0.1 });
+    <!-- ===================== MODALS ===================== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close">✕</button>
+            <span class="modal-icon" id="modal-icon"></span>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
 
-        document.querySelectorAll('.card, .brief-container, .guide-wrapper').forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(30px)";
-            el.style.transition = "all 0.8s ease-out";
-            observer.observe(el);
-        });
-    </script>
+    <script src="../JS/american.js"></script>
 </body>
 
 </html>
