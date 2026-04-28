@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../Images/BackGround1\(atlantis\).png');  
+    background-image: url('media/BackGround1\(atlantis\).png');  
     background-size: 100% auto; 
     background-position: top center;
     background-repeat: no-repeat; 
@@ -272,7 +272,7 @@ background: linear-gradient(
     font-size: 15px;
     backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(205, 227, 230, 0.4); /* لمسة تركواز */
+    border: 1px solid rgba(205, 227, 230, 0.4);
     white-space: nowrap;
     transform: translateY(10px);
     transition: 0.3s;

@@ -21,7 +21,7 @@
 
 body {
     background-color: var(--deep-bg);
-    background-image: url('../Images/nativeAmericans.png');
+    background-image: url('media/nativeAmericans.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-attachment: scroll;

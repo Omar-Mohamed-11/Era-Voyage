@@ -5,7 +5,7 @@ const eraData = [
         desc: "Thousands of years ago, the sands of Egypt hid secrets of magic, math, and the afterlife. Step into the shadows of the Great Temples to uncover the stories of the people who dreamt of eternity and achieved it.",
         btnText: "Uncover the Secrets",
         url: "egypt.html",
-        img: "egypt.png", 
+        img: "media/egypt.png", 
         accent: "#c5a059",
         bg: "radial-gradient(circle at 75% 50%, rgba(197, 160, 89, 0.2) 0%, #050505 70%)",
         isFlipped: false 
@@ -16,7 +16,7 @@ const eraData = [
         desc: "Beneath the weight of a thousand oceans lies a city forgotten by the sun. Once a beacon of advanced wisdom, it now rests in bioluminescent silence, guarding lost technology reclaimed by the sea.",
         btnText: "Descend into the Depths",
         url: "atlantis.html",
-        img: "atlantis.png", 
+        img: "media/atlantis.png", 
         accent: "#00f2ff", 
         bg: "radial-gradient(circle at 25% 50%, rgba(0, 242, 255, 0.18) 0%, #050505 70%)",
         isFlipped: true 
@@ -27,7 +27,7 @@ const eraData = [
         desc: "Before the cities rose, the land spoke to those who listened. Guided by the migration of the winds and the stars, these nations built a legacy of harmony and resilience that is carved into the very bones of the continent.",
         btnText: "Walk the Ancient Path",
         url: "native.html",
-        img: "native.png", 
+        img: "media/native.png", 
         accent: "#ff5e00", 
         bg: "radial-gradient(circle at 75% 50%, rgba(255, 94, 0, 0.15) 0%, #050505 70%)",
         isFlipped: false 
