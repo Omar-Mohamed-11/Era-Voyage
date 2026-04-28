@@ -4,7 +4,7 @@ const eraData = [
         title: "WHISPERS<br>OF THE SANDS", 
         desc: "Thousands of years ago, the sands of Egypt hid secrets of magic, math, and the afterlife. Step into the shadows of the Great Temples to uncover the stories of the people who dreamt of eternity and achieved it.",
         btnText: "Uncover the Secrets",
-        url: "..Pharaohs-Page/pharaohs.html",
+        url: "../Pharaohs-Page/pharaohs.html",
         img: "media/egypt.png", 
         accent: "#c5a059",
         bg: "radial-gradient(circle at 75% 50%, rgba(197, 160, 89, 0.2) 0%, #050505 70%)",
@@ -210,8 +210,17 @@ window.addEventListener('load', () => {
     }
 
     // Brief black pause
+gsap.to("#sound-btn", { opacity: 1, visibility: "visible", duration: 0.8, delay: 0.2 });
+
+if (sessionStorage.getItem('introSeen')) {
+    // Skip intro, go straight to main UI
+    document.getElementById('intro-overlay').style.display = 'none';
+    document.getElementById('main-ui').style.visibility = 'visible';
+    document.getElementById('main-ui').style.opacity = '1';
+} else {
+    sessionStorage.setItem('introSeen', 'true');
     setTimeout(step, 100);
-    gsap.to("#sound-btn", { opacity: 1, visibility: "visible", duration: 0.8, delay: 0.2 });
+}
 });
 
 window.addEventListener('resize', () => {
