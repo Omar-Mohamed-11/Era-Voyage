@@ -1,8 +1,3 @@
-// OMarAdell
-// This page will be the brain of my chatbot 
-
-
-// Private API key --> OMar-Adell
 const API_KEY = "AIzaSyCGyPQZWD0rVz0E3Bl5LluqDKWgKAl9PQw";
 
 
