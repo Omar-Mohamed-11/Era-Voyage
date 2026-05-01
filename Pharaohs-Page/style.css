@@ -57,6 +57,19 @@ body {
     z-index: 1;
 }
 
+.section-3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.308);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section-4 .card{
+    z-index: 1;
+}
+
 /* All Sections contesnt */
 .content {
     position: relative;
@@ -500,6 +513,7 @@ p {
     font-family:'Times New Roman', Times, serif;
     font-weight: 500;
     text-transform: uppercase;
+    transition: transform 0.4s ease;
 }
 
 .back-btn:hover {
@@ -507,4 +521,5 @@ p {
     color: rgb(0, 0, 0);
     border-color: #000;
     font-weight: bolder;
+    transform: scale(1.05);
 }
