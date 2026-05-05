@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         chatBotIcon.classList.add("hide");
     });
 
+    addMessage("Hello, Do you have anything to ask about ?", "bot");
+
     closeBtn.addEventListener("click", function () {
         chatbotContainer.classList.remove("active");
         chatBotIcon.classList.remove("hide");
@@ -76,11 +78,6 @@ function removeTyping() {
     }
 }
 
-// message appears in the chat once it's open
-window.onload = function ()
-{
-  addMessage("Hello, Do you have anything to ask about ?", "bot");
-};
 
 // Chat-bot Details
 function addMessage(text, type) {
