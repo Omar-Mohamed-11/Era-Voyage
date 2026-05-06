@@ -134,13 +134,13 @@ body {
 }
 
 .message.user {
-  background-color: #856e29;
+  background-color: #7c6624;
   color: white;
   align-self: flex-end;
 }
 
 .message.bot {
-  background-color: #544108;
+  background-color: #413206;
   color: white;
   align-self: flex-start;
 }
