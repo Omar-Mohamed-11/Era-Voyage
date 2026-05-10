@@ -191,7 +191,7 @@ ERA VOYAGE was developed to demonstrate the intersection of:
 ---
 ## License
 
-This project is developed for **educational and non-commercial purposes only**. All historical content, media assets, and third-party resources are used in accordance with their respective licenses. Redistribution or commercial use without explicit permission is not permitted.
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
 
 ---
 
