@@ -148,7 +148,7 @@ ERA-VOYAGE/
 **1. Clone the Repository**
 ```bash
 git clone <repository-url>
-cd ERA-VOYAGE
+cd era-voyage
 ```
 
 **2. Open in Visual Studio Code**
