@@ -86,6 +86,7 @@ ERA-VOYAGE/
 │   └── StartPage.js
 │
 ├── Chat-Bot/
+|   └── media/
 │   └── chatbot.js
 │
 ├── .gitignore
@@ -180,12 +181,12 @@ ERA VOYAGE was developed to demonstrate the intersection of:
 | Name | Role | GitHub |
 |---|---|---|
 | Omar Adel | Chat Bot Planning, Logic Architecture & API Integration | [GitHub](https://github.com/OMar-Adelll) |
-| Nour Elhoda | Start Page Development & Landing Page Design | [GitHub](https://github.com/Nourelhouda101) |
-| Mawada Gaber | Chat Bot UI Design & Integration Across All Pages | [GitHub](https://github.com/Mawadda0) |
+| Nour Elhouda | Start Page Development & Landing Page Design | [GitHub](https://github.com/Nourelhouda101) |
+| Mawadda Gaber | Chat Bot UI Design & Integration Across All Pages | [GitHub](https://github.com/Mawadda0) |
 | Omar Mohamed Hassan | Pharaohs Page Development & Design | [GitHub](https://github.com/Omar-Mohamed-11) |
 | Ziad Magdy | Pharaohs Page Development & Styling | [GitHub](https://github.com/ziad-magdy7) |
-| Noura | Atlantis Page Development & Design | [GitHub](https://github.com/Nouraa0) |
-| Hana | Atlantis Page Development & Content Integration | [GitHub](https://github.com/hana-abo-eissa) |
+| Noura Reda | Atlantis Page Development & Design | [GitHub](https://github.com/Nouraa0) |
+| Hana Abo Eissa | Atlantis Page Development & Content Integration | [GitHub](https://github.com/hana-abo-eissa) |
 | Ziad Amin | Native Americans Page Development & Design | [GitHub](https://github.com/ziadamin06) |
 
 ---
